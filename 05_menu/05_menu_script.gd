@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 func f_05_load_level():
-	get_tree().unload_current_scene();
 	get_tree().change_scene_to_file("res://10_game/10_game.tscn");
 	return;
 
