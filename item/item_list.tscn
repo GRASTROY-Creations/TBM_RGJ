@@ -1,0 +1,203 @@
+[gd_scene load_steps=48 format=3 uid="uid://knxanuavjo2p"]
+
+[ext_resource type="Texture2D" uid="uid://bo5pirij0n0sf" path="res://tile/Ghostpixxells_pixelfood/05_apple_pie.png" id="1_1lgpp"]
+[ext_resource type="Texture2D" uid="uid://bg34np35pk371" path="res://tile/Ghostpixxells_pixelfood/07_bread.png" id="2_4hcdn"]
+[ext_resource type="Texture2D" uid="uid://bh841ed4wf8cu" path="res://tile/Ghostpixxells_pixelfood/09_baguette.png" id="3_syosl"]
+[ext_resource type="Texture2D" uid="uid://dq43ljleyswbt" path="res://tile/Ghostpixxells_pixelfood/11_bun.png" id="4_5j3ww"]
+[ext_resource type="Texture2D" uid="uid://bu55vro4newq6" path="res://tile/Ghostpixxells_pixelfood/13_bacon.png" id="5_3q4nc"]
+[ext_resource type="Texture2D" uid="uid://dlmx6ubem7oc3" path="res://tile/Ghostpixxells_pixelfood/15_burger.png" id="6_an0xm"]
+[ext_resource type="Texture2D" uid="uid://dt3t31bre5oxk" path="res://tile/Ghostpixxells_pixelfood/18_burrito.png" id="7_8qfi6"]
+[ext_resource type="Texture2D" uid="uid://djruork8fywut" path="res://tile/Ghostpixxells_pixelfood/20_bagel.png" id="8_a12xy"]
+[ext_resource type="Texture2D" uid="uid://cdusd541fohtj" path="res://tile/Ghostpixxells_pixelfood/22_cheesecake.png" id="9_ln8nq"]
+[ext_resource type="Texture2D" uid="uid://bc1t5bovypo8u" path="res://tile/Ghostpixxells_pixelfood/24_cheesepuff.png" id="10_fccu6"]
+[ext_resource type="Texture2D" uid="uid://c13lhavvjdp48" path="res://tile/Ghostpixxells_pixelfood/26_chocolate.png" id="11_1u0po"]
+[ext_resource type="Texture2D" uid="uid://b02tnfvoo7nq5" path="res://tile/Ghostpixxells_pixelfood/28_cookies.png" id="12_1vbjc"]
+[ext_resource type="Texture2D" uid="uid://cgqfh3vq5sx1y" path="res://tile/Ghostpixxells_pixelfood/30_chocolatecake.png" id="13_34ppt"]
+[ext_resource type="Texture2D" uid="uid://2qcfrxye63t5" path="res://tile/Ghostpixxells_pixelfood/34_donut.png" id="14_08huy"]
+[ext_resource type="Texture2D" uid="uid://dvlonber33xsg" path="res://tile/Ghostpixxells_pixelfood/36_dumplings.png" id="15_do7mk"]
+[ext_resource type="Texture2D" uid="uid://bwfms6wycmdjs" path="res://tile/Ghostpixxells_pixelfood/38_friedegg.png" id="16_clpqh"]
+[ext_resource type="Texture2D" uid="uid://cf0eqjd6hyfta" path="res://tile/Ghostpixxells_pixelfood/40_eggsalad.png" id="17_j3cjs"]
+[ext_resource type="Texture2D" uid="uid://hi6d2n4k2643" path="res://tile/Ghostpixxells_pixelfood/42_eggtart.png" id="18_llm47"]
+[ext_resource type="Texture2D" uid="uid://23uh0nmwl0jc" path="res://tile/Ghostpixxells_pixelfood/44_frenchfries.png" id="19_qjn4e"]
+[ext_resource type="Texture2D" uid="uid://d00mb36hxp3ki" path="res://tile/Ghostpixxells_pixelfood/46_fruitcake.png" id="20_ul7es"]
+[ext_resource type="Texture2D" uid="uid://uhl2suk531fb" path="res://tile/Ghostpixxells_pixelfood/48_garlicbread.png" id="21_76csc"]
+[ext_resource type="Texture2D" uid="uid://dd8w2e56qybqm" path="res://tile/Ghostpixxells_pixelfood/50_giantgummybear.png" id="22_cija1"]
+[ext_resource type="Texture2D" uid="uid://wjpo01d0qcah" path="res://tile/Ghostpixxells_pixelfood/52_gingerbreadman.png" id="23_jendm"]
+[ext_resource type="Texture2D" uid="uid://bwhenxaip1ot8" path="res://tile/Ghostpixxells_pixelfood/54_hotdog.png" id="24_4jhcg"]
+[ext_resource type="Texture2D" uid="uid://ceh65afwijqac" path="res://tile/Ghostpixxells_pixelfood/55_hotdog_sauce.png" id="25_fhb3s"]
+[ext_resource type="Texture2D" uid="uid://b488lhierrvfn" path="res://tile/Ghostpixxells_pixelfood/57_icecream.png" id="26_4wism"]
+[ext_resource type="Texture2D" uid="uid://cojxdwalf2dek" path="res://tile/Ghostpixxells_pixelfood/59_jelly.png" id="27_8aqkl"]
+[ext_resource type="Texture2D" uid="uid://dhetxl6nu0fk2" path="res://tile/Ghostpixxells_pixelfood/63_lemonpie.png" id="28_c620g"]
+[ext_resource type="Texture2D" uid="uid://r0ktg1jfubhi" path="res://tile/Ghostpixxells_pixelfood/65_loafbread.png" id="29_fr4jp"]
+[ext_resource type="Texture2D" uid="uid://drkiu70wdo1vj" path="res://tile/Ghostpixxells_pixelfood/67_macncheese.png" id="30_8laee"]
+[ext_resource type="Texture2D" uid="uid://bwl067j5ixp03" path="res://tile/Ghostpixxells_pixelfood/69_meatball.png" id="31_yj2vk"]
+[ext_resource type="Texture2D" uid="uid://jsias6skpvx8" path="res://tile/Ghostpixxells_pixelfood/71_nacho.png" id="32_eilfq"]
+[ext_resource type="Texture2D" uid="uid://b56fg5h5uw3tl" path="res://tile/Ghostpixxells_pixelfood/73_omlet.png" id="33_cibin"]
+[ext_resource type="Texture2D" uid="uid://dowypuie5ryba" path="res://tile/Ghostpixxells_pixelfood/75_pudding.png" id="34_u0xrb"]
+[ext_resource type="Texture2D" uid="uid://ctlfmpb30g4a7" path="res://tile/Ghostpixxells_pixelfood/77_potatochips.png" id="35_on55i"]
+[ext_resource type="Texture2D" uid="uid://cmhwg4iev2w34" path="res://tile/Ghostpixxells_pixelfood/79_pancakes.png" id="36_kpdom"]
+[ext_resource type="Texture2D" uid="uid://hq5jifa1kgvy" path="res://tile/Ghostpixxells_pixelfood/81_pizza.png" id="37_hdq5r"]
+[ext_resource type="Texture2D" uid="uid://dgqf1p8hprmb8" path="res://tile/Ghostpixxells_pixelfood/83_popcorn.png" id="38_t73wu"]
+[ext_resource type="Texture2D" uid="uid://divhtd6dptime" path="res://tile/Ghostpixxells_pixelfood/85_roastedchicken.png" id="39_d0e1r"]
+[ext_resource type="Texture2D" uid="uid://d3ggreqvg41yp" path="res://tile/Ghostpixxells_pixelfood/88_salmon.png" id="40_wyofj"]
+[ext_resource type="Texture2D" uid="uid://djwmygwkg22ub" path="res://tile/Ghostpixxells_pixelfood/90_strawberrycake.png" id="41_gpkkg"]
+[ext_resource type="Texture2D" uid="uid://bj1fam5lm8m60" path="res://tile/Ghostpixxells_pixelfood/92_sandwich.png" id="42_k207i"]
+[ext_resource type="Texture2D" uid="uid://konyly3mhx63" path="res://tile/Ghostpixxells_pixelfood/95_steak.png" id="43_5g4rv"]
+[ext_resource type="Texture2D" uid="uid://cjbnm27lbm2jl" path="res://tile/Ghostpixxells_pixelfood/97_sushi.png" id="44_e0g5j"]
+[ext_resource type="Texture2D" uid="uid://dvl8mvndo3ipc" path="res://tile/Ghostpixxells_pixelfood/99_taco.png" id="45_jxdwe"]
+[ext_resource type="Texture2D" uid="uid://dgtm0pw6vdexi" path="res://tile/Ghostpixxells_pixelfood/101_waffle.png" id="46_hq8es"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jewlt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_1lgpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4hcdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_syosl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5j3ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3q4nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_an0xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8qfi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a12xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ln8nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fccu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1u0po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1vbjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_34ppt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_08huy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_do7mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_clpqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j3cjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_llm47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qjn4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ul7es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_76csc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cija1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jendm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4jhcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fhb3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4wism")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8aqkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_c620g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_fr4jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_8laee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_yj2vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_eilfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cibin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_u0xrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_on55i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kpdom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hdq5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_t73wu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_d0e1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wyofj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_gpkkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_k207i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5g4rv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_e0g5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_jxdwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_hq8es")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ItemList" type="AnimatedSprite2D"]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_jewlt")
+frame = 41
+frame_progress = 0.401625

@@ -19,7 +19,7 @@ config/name_localized={
 "ru": ""
 }
 config/version="0.0.1"
-run/main_scene="res://05_menu/05_menu.tscn"
+run/main_scene="res://level/lvl_00_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 

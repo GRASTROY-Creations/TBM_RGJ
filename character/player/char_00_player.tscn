@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://co5ln32cnfmj6"]
+
+[ext_resource type="Script" path="res://character/player/char_00_player.gd" id="1_rxfdw"]
+[ext_resource type="Texture2D" uid="uid://bs310octanxsd" path="res://character/player/00_character_a.png" id="2_b81kh"]
+[ext_resource type="PackedScene" uid="uid://knxanuavjo2p" path="res://item/item_list.tscn" id="2_yrc8q"]
+[ext_resource type="Texture2D" uid="uid://bt843ic245335" path="res://character/player/00_character_b.png" id="3_gxifi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_br1e3"]
+size = Vector2(93, 161)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3d1f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b81kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gxifi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55lm4"]
+size = Vector2(253, 230)
+
+[node name="Char00Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_rxfdw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.5, -10.5)
+shape = SubResource("RectangleShape2D_br1e3")
+
+[node name="ItemList" parent="." instance=ExtResource("2_yrc8q")]
+position = Vector2(0, -115)
+rotation = -1.5708
+frame = 0
+frame_progress = 0.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g3d1f")
+frame_progress = 0.431607
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+
+[node name="Area2D_Interaction" type="Area2D" parent="."]
+position = Vector2(-8.5, -10.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Interaction"]
+position = Vector2(9, -94.5)
+shape = SubResource("RectangleShape2D_55lm4")
+
+[node name="Node2D_Drop_Position" type="Node2D" parent="."]
+position = Vector2(0, -187)

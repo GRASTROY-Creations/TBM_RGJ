@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6oskw4r3e77x"]
+
+[ext_resource type="PackedScene" uid="uid://co5ln32cnfmj6" path="res://character/player/char_00_player.tscn" id="2_0fpds"]
+[ext_resource type="PackedScene" uid="uid://c3vuiuc04s3tj" path="res://item/item_00.tscn" id="2_bitmv"]
+
+[node name="Lvl01Game" type="Node2D"]
+
+[node name="Char00Player" parent="." instance=ExtResource("2_0fpds")]
+position = Vector2(199, 153)
+
+[node name="World_Items" type="Node2D" parent="."]
+
+[node name="Item00" parent="World_Items" instance=ExtResource("2_bitmv")]
+position = Vector2(419, 319)
