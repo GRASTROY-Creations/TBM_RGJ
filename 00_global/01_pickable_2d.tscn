@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr2lrkm1bxp3"]
+
+[ext_resource type="Script" path="res://00_global/01_pickable_2d.gd" id="1_rw6af"]
+[ext_resource type="Texture2D" uid="uid://db0gjy8anwi7b" path="res://00_global/01_pickable_a.png" id="1_w38ff"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vydf8"]
+size = Vector2(125, 164)
+
+[node name="00Pickable2d" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_rw6af")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vydf8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w38ff")

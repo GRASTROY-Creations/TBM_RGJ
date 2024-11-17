@@ -24,7 +24,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -51,6 +50,7 @@ layout_mode = 2
 tab_alignment = 2
 current_tab = 0
 clip_tabs = false
+tabs_visible = false
 
 [node name="Main_Menu" type="VBoxContainer" parent="CenterContainer/VBoxContainer/TabContainer"]
 layout_mode = 2
@@ -86,7 +86,7 @@ layout_mode = 2
 text = "Back to Menu"
 script = ExtResource("1_pbxuu")
 
-[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Start" to="." method="f_05_load_level"]
-[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Customize" to="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Customize" method="f_05_customize_open_tab"]
-[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Exit" to="." method="f_05_exit_game"]
-[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Customization/Button" to="." method="f_05_customize_back_to_menu"]
+[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Start" to="." method="fc_05_load_level"]
+[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Customize" to="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Customize" method="fc_05_customize_open_tab"]
+[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Menu/Button_Exit" to="." method="fc_05_exit_game"]
+[connection signal="button_up" from="CenterContainer/VBoxContainer/TabContainer/Main_Customization/Button" to="." method="fc_05_customize_back_to_menu"]

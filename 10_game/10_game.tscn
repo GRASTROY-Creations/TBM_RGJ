@@ -1,29 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnb6biwh7o5nf"]
+[gd_scene load_steps=5 format=3 uid="uid://cnb6biwh7o5nf"]
 
-[ext_resource type="Texture2D" uid="uid://b50lrw6vn6281" path="res://00_global/placeholder.png" id="1_iho6t"]
 [ext_resource type="Script" path="res://10_game/10_game.gd" id="1_kkphy"]
-[ext_resource type="Script" path="res://00_global/character_body_2d.gd" id="2_cnj6a"]
-[ext_resource type="SpriteFrames" uid="uid://dupfg1nph23kd" path="res://00_global/player_sprite_frames.tres" id="2_vl6l7"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8tugj"]
+[ext_resource type="PackedScene" uid="uid://dr2lrkm1bxp3" path="res://00_global/01_pickable_2d.tscn" id="3_nnopv"]
+[ext_resource type="PackedScene" uid="uid://cyh25p5ysy5iu" path="res://00_global/00_character_2d.tscn" id="3_v7m6g"]
+[ext_resource type="PackedScene" uid="uid://4jgm7r31swjh" path="res://00_global/02_man.tscn" id="4_spbvx"]
 
 [node name="10Game" type="Node2D"]
 script = ExtResource("1_kkphy")
 
-[node name="Placeholder" type="Sprite2D" parent="."]
-position = Vector2(254, 475)
-texture = ExtResource("1_iho6t")
+[node name="LayerGround" type="Node2D" parent="."]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-scale = Vector2(3, 3)
-script = ExtResource("2_cnj6a")
+[node name="LayerWalls" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CapsuleShape2D_8tugj")
+[node name="LayerItems" type="Node2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="00Pickable2d" parent="LayerItems" instance=ExtResource("3_nnopv")]
+position = Vector2(303, 211)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(1.19209e-07, -2.98023e-07)
-scale = Vector2(0.0833333, 0.125)
-sprite_frames = ExtResource("2_vl6l7")
+[node name="LayerPlayer" type="Node2D" parent="."]
+
+[node name="00Character2d" parent="LayerPlayer" instance=ExtResource("3_v7m6g")]
+position = Vector2(67, 247)
+scale = Vector2(0.5, 0.5)
+
+[node name="LayerHumans" type="Node2D" parent="."]
+
+[node name="02Man" parent="LayerHumans" instance=ExtResource("4_spbvx")]
+position = Vector2(265, 526)
+
+[node name="LayerMetro" type="Node2D" parent="."]
+
+[node name="LayerCeiling" type="Node2D" parent="."]
