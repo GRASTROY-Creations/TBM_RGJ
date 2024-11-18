@@ -197,7 +197,7 @@ animations = [{
 }]
 
 [node name="ItemList" type="AnimatedSprite2D"]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_jewlt")
 frame = 41
 frame_progress = 0.401625

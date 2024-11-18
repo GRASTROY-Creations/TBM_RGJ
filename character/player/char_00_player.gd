@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 const CON_SPEED = 300.0
 var v_animations_sprite : AnimatedSprite2D
-var v_interaction_area : Area2D
+var v_interaction_range : Area2D
 var v_item_list : AnimatedSprite2D
 var v_item_scene : PackedScene = load("res://item/item_00.tscn")
+var v_points : int = 0;
 
 func _ready() -> void:
 	v_animations_sprite = get_node("AnimatedSprite2D")
-	v_interaction_area = get_node("Area2D_Interaction")
+	v_interaction_range = get_node("Area2D_Interaction")
 	v_item_list = get_node("ItemList")
 	pass
 
@@ -36,6 +37,8 @@ func f_sys_movement():
 		velocity = Vector2(direction_x, direction_y)
 		# stop animation
 		v_animations_sprite.stop()
+	if Input.is_action_just_released("game_jump"):
+		velocity = velocity * 20
 	move_and_slide()
 	pass
 
@@ -44,23 +47,41 @@ func f_sys_grabbing():
 	if Input.is_action_just_released("game_cling"):
 		if v_item_list.frame == 0:
 			# grab item
-			var interacted_stuff = v_interaction_area.get_overlapping_bodies()
+			var interacted_stuff = v_interaction_range.get_overlapping_bodies()
 			if interacted_stuff.size() > 0:
 				for item in interacted_stuff:
-					if item.has_method("f_interact"):
-						v_item_list.frame = item.f_interact();
+					if item.has_method("f_pickup"):
+						v_item_list.frame = item.f_pickup();
 						break;
 			pass
 		else:
-			#drop item
-			v_item_list.frame = 0
-			# todo spawn item in world
-			if v_item_scene:
-				var l_item_instance = v_item_scene.instantiate()
-				var l_position : Node2D = get_node("Node2D_Drop_Position")
-				l_item_instance.global_position = l_position.global_position
-				find_parent("Lvl01Game").get_node("World_Items").add_child(l_item_instance)
-			pass
+			# drop item
+			var interacted_areas = v_interaction_range.get_overlapping_areas()
+			if interacted_areas.size() > 0:
+				for area in interacted_areas:
+					if area.has_method("f_drop"):
+						area.f_drop(v_item_list.frame, self) # drop item to place
+						# hide item on player
+						v_item_list.frame = 0
+						return;
+						
+			else:
+				# hide item on player
+				v_item_list.frame = 0
+				# drop item to world
+				if v_item_scene:
+					var l_item_instance = v_item_scene.instantiate()
+					var l_position : Node2D = get_node("Node2D_Drop_Position")
+					l_item_instance.global_position = l_position.global_position
+					find_parent("Lvl01Game").get_node("World_Items").add_child(l_item_instance)
+				pass
 		pass
+	pass
 
+func f_mod_points(add:bool,value : int):
+	if add:
+		v_points = v_points+value
+	else:
+		v_points = v_points- value	
+	print("Points: ", v_points)
 	pass
