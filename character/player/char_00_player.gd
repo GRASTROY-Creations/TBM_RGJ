@@ -68,7 +68,6 @@ func f_sys_grabbing():
 						# hide item on player
 						v_item_list.frame = 0
 						return;
-						
 			else:
 				# hide item on player
 				v_item_list.frame = 0
@@ -86,6 +85,7 @@ func f_mod_points(add:bool,value : int):
 	if add:
 		v_points = v_points+value
 	else:
-		v_points = v_points- value	
+		v_points = v_points- value
 	print("Points: ", v_points)
+	find_child("HudInGame00").f_update_hud_points(v_points)
 	pass
