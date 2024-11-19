@@ -6,6 +6,7 @@ var v_interaction_range : Area2D
 var v_item_list : AnimatedSprite2D
 var v_item_scene : PackedScene = load("res://item/item_00.tscn")
 var v_points : int = 0;
+var v_speed_up_factor = 1.5;
 
 func _ready() -> void:
 	v_animations_sprite = get_node("AnimatedSprite2D")
@@ -27,7 +28,11 @@ func f_sys_movement():
 	var direction_y := Input.get_axis("game_up", "game_down")
 	if direction_x or direction_y:
 		# set velocity to movement
-		velocity = Vector2(direction_x, direction_y) * CON_SPEED
+		if Input.is_action_pressed("game_speedup"):
+			v_speed_up_factor = 2.0
+		else:
+			v_speed_up_factor = 1.0
+		velocity = Vector2(direction_x, direction_y) * CON_SPEED * v_speed_up_factor
 		# set rotation
 		global_rotation = velocity.angle() + deg_to_rad(90)
 		# play animation
@@ -38,12 +43,11 @@ func f_sys_movement():
 		# stop animation
 		v_animations_sprite.stop()
 	if Input.is_action_just_released("game_jump"):
-		velocity = velocity * 20
+		velocity = velocity * 15
 	move_and_slide()
 	pass
 
 func f_sys_grabbing():
-	
 	if Input.is_action_just_released("game_cling"):
 		if v_item_list.frame == 0:
 			# grab item

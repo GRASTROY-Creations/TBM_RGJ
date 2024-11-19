@@ -1,4 +1,40 @@
-[gd_scene format=3 uid="uid://diadr7fqeq2d2"]
+[gd_scene load_steps=7 format=3 uid="uid://diadr7fqeq2d2"]
+
+[ext_resource type="Script" path="res://character/char_01_human.gd" id="1_rkucw"]
+[ext_resource type="Texture2D" uid="uid://d0bh2w3vuxc8c" path="res://tile/man_0.png" id="2_iv8s6"]
+[ext_resource type="Texture2D" uid="uid://mmgdc6vhchgr" path="res://tile/man_1.png" id="3_2nahi"]
+[ext_resource type="Texture2D" uid="uid://daiqy3iaowgxa" path="res://tile/man_2.png" id="4_bwvvp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dsa5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rwf75"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iv8s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2nahi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iv8s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bwvvp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Char00Human" type="CharacterBody2D"]
 motion_mode = 1
+script = ExtResource("1_rkucw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8dsa5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rwf75")
+frame = 3
+frame_progress = 0.706199

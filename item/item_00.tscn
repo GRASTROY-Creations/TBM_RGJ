@@ -13,6 +13,5 @@ script = ExtResource("1_cdoo6")
 shape = SubResource("RectangleShape2D_vsfno")
 
 [node name="ItemList" parent="." instance=ExtResource("2_ghpw0")]
-scale = Vector2(1, 1)
 frame = 0
 frame_progress = 0.0
