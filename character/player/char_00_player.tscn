@@ -47,6 +47,7 @@ sprite_frames = SubResource("SpriteFrames_g3d1f")
 frame_progress = 0.431607
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 

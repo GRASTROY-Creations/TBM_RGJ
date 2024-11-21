@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlo0sue7xchpf"]
+[gd_scene load_steps=6 format=3 uid="uid://dlo0sue7xchpf"]
 
 [ext_resource type="Texture2D" uid="uid://b8qglmyw3ghql" path="res://tile/train.png" id="1_4ktcw"]
 [ext_resource type="Script" path="res://character/char_02_train.gd" id="1_wvxuf"]
@@ -17,17 +17,38 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fofi1"]
 size = Vector2(1380, 234)
 
-[node name="Char02Train" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsmtk"]
+size = Vector2(885, 124)
+
+[node name="Node2DTrain" type="Node2D"]
 script = ExtResource("1_wvxuf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+motion_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_mnipd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_fofi1")
 
-[node name="Node2D_SpawnPoint_01" type="Node2D" parent="."]
-position = Vector2(-450, 200)
+[node name="Node2D_SpawnPoint_01" type="Node2D" parent="CharacterBody2D"]
+position = Vector2(-510, 200)
 
-[node name="Node2D_SpawnPoint_02" type="Node2D" parent="."]
-position = Vector2(450, 200)
+[node name="Node2D_SpawnPoint_02" type="Node2D" parent="CharacterBody2D"]
+position = Vector2(510, 200)
+
+[node name="CollisionShape2D_Entrance" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 220)
+shape = SubResource("RectangleShape2D_tsmtk")
+
+[node name="Timer_Train_Restart" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Timer_Train_Station" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer_Train_Restart" to="." method="_on_timer_train_restart_timeout"]
+[connection signal="timeout" from="Timer_Train_Station" to="." method="_on_timer_train_station_timeout"]
